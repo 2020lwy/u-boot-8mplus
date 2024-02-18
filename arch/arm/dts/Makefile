@@ -987,7 +987,6 @@ dtb-$(CONFIG_ARCH_IMX8M) += \
 	imx8mn-ddr4-ab2.dtb \
 	imx8mq-cm.dtb \
 	imx8mn-evk.dtb \
-	imx8mn-evk-test.dtb \
 	imx8mn-ab2.dtb \
 	imx8mn-var-som-symphony.dtb \
 	imx8mn-venice.dtb \
@@ -1001,6 +1000,7 @@ dtb-$(CONFIG_ARCH_IMX8M) += \
 	imx8mq-phanbell.dtb \
 	imx8mp-ddr4-evk.dtb \
 	imx8mp-evk.dtb \
+	imx8mp-evk-test.dtb \
 	imx8mp-phyboard-pollux-rdk.dtb \
 	imx8mp-verdin.dtb \
 	imx8mq-pico-pi.dtb \
