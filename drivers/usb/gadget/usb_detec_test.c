@@ -9,13 +9,13 @@
 #if 1
 int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const argv[])
 {
-    #if 0
+    
     printf("%x\n",cmdtp);
     printf("%s\n",argv);
     printf("%d\n",flag);
     printf("%d\n",argc);
     printf("test here -_-.\n");
-    
+    #if 0
     char buffer[BUFFER_SIZE + 1];
     loff_t file_size, actread;
     int ret;
@@ -76,7 +76,7 @@ int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const ar
 }
 #endif
 
-#if 0
+#if 1
 U_BOOT_CMD(
     read_uboot_file,    // command name
     1,                  // maxargs
