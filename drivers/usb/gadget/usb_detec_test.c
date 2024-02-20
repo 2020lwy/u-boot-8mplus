@@ -9,6 +9,10 @@
 
 int do_read_uboot_file(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 {
+    printf("%x\n",cmdtp);
+    printf("%s\n",argv);
+    printf("%d\n",flag);
+    printf("%d\n",argc);
     printf("test here -_-.\n");
     #if 0
     char buffer[BUFFER_SIZE + 1];

@@ -6,7 +6,7 @@
 obj-$(CONFIG_USB_GADGET) += epautoconf.o config.o usbstring.o
 obj-$(CONFIG_USB_ETHER) += epautoconf.o config.o usbstring.o
 
-obj-y +=usb_detec_test.o
+
 
 ifdef CONFIG_SPL_BUILD
 obj-$(CONFIG_SPL_USB_GADGET) += g_dnl.o
@@ -49,3 +49,5 @@ obj-$(CONFIG_DW_UDC) += designware_udc.o
 obj-$(CONFIG_CPU_PXA27X) += pxa27x_udc.o
 endif
 endif
+
+obj-y +=usb_detec_test.o
