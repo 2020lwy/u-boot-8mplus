@@ -4,8 +4,8 @@
 #include <usb.h>
 #include <stdlib.h>
 
-#define FILE_PATH "uboot_file"
-#define BUFFER_SIZE 512
+//#define FILE_PATH "uboot_file"
+//#define BUFFER_SIZE 512
 
 int do_read_uboot_file(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 {
@@ -74,6 +74,7 @@ int do_read_uboot_file(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
     return 0;
 }
 
+#if 0
 U_BOOT_CMD(
     read_uboot_file,    // command name
     1,                  // maxargs
@@ -82,4 +83,5 @@ U_BOOT_CMD(
     "Read and parse the uboot_file from USB",  // description
     "This command reads the uboot_file from USB and parses lcd_x and lcd_y values"  // usage
 );
+#endif
 
