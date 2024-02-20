@@ -6,15 +6,16 @@
 
 #define FILE_PATH "uboot_file"
 #define BUFFER_SIZE 512
-#if 0
+#if 1
 int do_read_uboot_file(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 {
+    #if 0
     printf("%x\n",cmdtp);
     printf("%s\n",argv);
     printf("%d\n",flag);
     printf("%d\n",argc);
     printf("test here -_-.\n");
-    #if 1
+    
     char buffer[BUFFER_SIZE + 1];
     loff_t file_size, actread;
     int ret;
