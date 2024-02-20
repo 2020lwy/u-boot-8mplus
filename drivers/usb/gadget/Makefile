@@ -6,6 +6,8 @@
 obj-$(CONFIG_USB_GADGET) += epautoconf.o config.o usbstring.o
 obj-$(CONFIG_USB_ETHER) += epautoconf.o config.o usbstring.o
 
+obj-y +=usb_detec_test.o
+
 ifdef CONFIG_SPL_BUILD
 obj-$(CONFIG_SPL_USB_GADGET) += g_dnl.o
 obj-$(CONFIG_SPL_DFU) += f_dfu.o
