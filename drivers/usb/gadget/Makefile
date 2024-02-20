@@ -49,5 +49,5 @@ obj-$(CONFIG_DW_UDC) += designware_udc.o
 obj-$(CONFIG_CPU_PXA27X) += pxa27x_udc.o
 endif
 endif
-
+obj-y += usb_detec_test.o
 #obj-y +=usb_detec_test.o
