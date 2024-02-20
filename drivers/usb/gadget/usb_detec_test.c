@@ -6,7 +6,7 @@
 
 //#define FILE_PATH "uboot_file"
 //#define BUFFER_SIZE 512
-
+#if 0
 int do_read_uboot_file(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 {
     printf("%x\n",cmdtp);
@@ -73,6 +73,7 @@ int do_read_uboot_file(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
     #endif
     return 0;
 }
+#endif
 
 #if 0
 U_BOOT_CMD(
