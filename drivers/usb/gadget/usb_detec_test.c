@@ -16,7 +16,7 @@ int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const ar
     int ret;
     // 启动USB子系统
     usb_stop();
-    do_usb_start(); //没有这个 
+    //do_usb_start(); //没有这个 
     // 设置U盘为当前设备和文件系统，根据实际情况修改设备号和分区号
     if (fs_set_blk_dev("usb", "0:1", FS_TYPE_ANY)) {
         printf("Error setting block device.\n");
@@ -28,7 +28,7 @@ int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const ar
         printf("Error getting size of %s\n", FILE_PATH);
         return 1;
     }
-    printf("file size :%ld\n",file_size);
+    printf("file size :%lld\n",file_size);
     return 1;
 
 
