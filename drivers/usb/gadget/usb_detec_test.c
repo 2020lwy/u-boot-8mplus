@@ -16,6 +16,9 @@ int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const ar
     int ret;
     // 启动USB子系统
     usb_stop();
+    char _cmd[32];
+    sprintf(_cmd, "usb start");
+	run_command(_cmd, 0);
     //do_usb_start(); //没有这个 
     // 设置U盘为当前设备和文件系统，根据实际情况修改设备号和分区号
     if (fs_set_blk_dev("usb", "0:1", FS_TYPE_ANY)) {
