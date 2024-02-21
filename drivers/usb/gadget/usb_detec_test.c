@@ -4,21 +4,21 @@
 #include <usb.h>
 #include <stdlib.h>
 
-#define FILE_PATH "uboot_file"
+#define FILE_PATH "AF_UPGRADE/u-boot.bin"
 #define BUFFER_SIZE 512
 #if 1
 int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const argv[])
 {
     printf("test here -_---------.\n");
-    #if 0
+    #if 1
     char buffer[BUFFER_SIZE + 1];
     loff_t file_size, actread;
     int ret;
     // 启动USB子系统
-    //usb_stop();
-   // usb_start(); //没有这个 
+    usb_stop();
+    do_usb_start(); //没有这个 
     // 设置U盘为当前设备和文件系统，根据实际情况修改设备号和分区号
-    if (fs_set_blk_dev("usb", "0:4", FS_TYPE_ANY)) {
+    if (fs_set_blk_dev("usb", "0:1", FS_TYPE_ANY)) {
         printf("Error setting block device.\n");
         return 1;
     }
@@ -28,6 +28,9 @@ int do_read_uboot_file(struct cmd_tbl *cmdtp, int flag, int argc, char *const ar
         printf("Error getting size of %s\n", FILE_PATH);
         return 1;
     }
+    printf("file size :%ld\n",file_size);
+    return 1;
+
 
     // 确保不尝试读取超出文件大小的内容
     if (file_size > BUFFER_SIZE) {
